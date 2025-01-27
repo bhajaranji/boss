@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2><%= "Hello devops!" %></h2>
+<h2><%= "Hello dosto!" %></h2>
 </body>
 </html>
