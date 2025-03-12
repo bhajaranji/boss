@@ -42,16 +42,7 @@
 
   <build>
                               
-<distributionManagement>
-    <repository>
-        <id>nexus-releases</id>
-        <url>http://43.204.22.88:8081/repository/maven-releases/</url>
-    </repository>
-    <snapshotRepository>
-        <id>nexus-snapshots</id>
-        <url>http://43.204.22.88:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
-</distributionManagement>
+
     
     <finalName>abhi</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -88,4 +79,14 @@
       </plugins>
     </pluginManagement>
   </build>
+  <distributionManagement>
+    <repository>
+        <id>nexus-releases</id>
+        <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+        <id>nexus-snapshots</id>
+        <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
