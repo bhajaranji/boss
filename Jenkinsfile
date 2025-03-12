@@ -35,13 +35,13 @@ pipeline{
         }
         stage('tag'){
             steps{
-                sh 'docker tag app maheshgowdamg25/nexus'
+                sh 'docker tag app abhinay2231/nexus'
             }
         }
         stage('Push to dockerhub'){
             steps{
                 sh 'echo "abhinay2231" | docker login -u "sanman2231" --password-stdin'
-                sh 'docker push maheshgowdamg25/nexus'
+                sh 'docker push abhinay2231/nexus'
             }
         }
         stage('Remove images'){
@@ -51,12 +51,12 @@ pipeline{
         }
         stage('Pull image from DockerHub'){
             steps{
-                sh 'docker pull maheshgowdamg25/nexus'
+                sh 'docker pull abhinay2231/nexus'
             }
         }
         stage('Run a container'){
             steps{
-                sh 'docker run -it -d --name webapp -p 8081:8080 maheshgowdamg25/nexus'
+                sh 'docker run -it -d --name webapp -p 8081:8080 abhinay2231/nexus'
             }
         }
     }
