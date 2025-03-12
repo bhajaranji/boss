@@ -26,9 +26,33 @@
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+  </dependencies><repositories>
+    <repository>
+        <id>nexus-releases</id>
+        <name>maven-releases</name>
+        <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+    <repository>
+        <id>nexus-snapshots</id>
+        <name>maven-snapshots</name>
+        <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </repository>
+</repositories>
+  
 
   <build>
+                              
+<distributionManagement>
+    <repository>
+        <id>nexus-releases</id>
+        <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+        <id>nexus-snapshots</id>
+        <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
+    
     <finalName>abhi</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
