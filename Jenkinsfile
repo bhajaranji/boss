@@ -40,8 +40,10 @@ pipeline{
         }
         stage('Push to dockerhub'){
             steps{
-                sh 'echo "abhinay2231" | docker login -u "sanman2231" --password-stdin'
-                sh 'docker push abhinay2231/nexus'
+                sh '''
+                echo "abhinay2231" | docker login -u "sanman2231" --password-stdin'
+                docker push abhinay2231/nexus
+                '''
             }
         }
         stage('Remove images'){
