@@ -41,7 +41,7 @@ pipeline{
         stage('Push to dockerhub'){
             steps{
                 sh '''
-                echo "abhinay2231" | docker login -u "sanman2231" --password-stdin'
+                docker login -u abhinay2231 -p sanman2231
                 docker push abhinay2231/nexus
                 '''
             }
